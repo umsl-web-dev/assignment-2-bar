@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ca9de22987.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="app.css">
+    <title>Sign Up </title>
+</head>
+
+<body>
+    <!-- NavBAr -->
+    <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
+        <a href="" class="navbar-brand"> <i class="fas fa-wine-bottle"> </i> WINERY.INC </a>
+        <!-- creates hamburger DropMenu  -->
+        <button class="class navbar-toggler" data-toggle="collapse" data-target="#navLinks"
+            aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- creates the links inside the button and we are passing the info by the id name -->
+        <div class="class collapse navbar-collapse" id="navLinks">
+            <ul class="class navbar-nav">
+                <li class="class nav-item">
+                    <a href="./index.html" class="class nav-link"> HOME </a>
+                </li>
+
+                <li class="class nav-item">
+                    <a href="./store.html" class="class nav-link"> SHOP </a>
+                </li>
+
+                <li class="class nav-item">
+                    <a href="./signup.html" class="class nav-link"> SIGN UP </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- sign up form  -->
+    <div class="container pt-5">
+
+        <!-- registration form  -->
+        <form id="register-form">
+            <input id="uName" type="text" placeholder="Name" value="" />
+            <input id="uPw" type="password" placeholder="Password" value="" />
+            <input id="rgstr_btn" type="submit" value="get Account" onClick="store()" />
+        </form>
+
+        <!-- login form -->
+
+        <form id="login-form" action="./index.html">
+            <input id="userName" type="text" placeholder="Enter Username" value="" />
+            <input id="userPw" type="password" placeholder="Enter Password" value="" />
+            <input id="login_btn" type="submit" value="Login" onClick="check()" />
+        </form>
+
+
+
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js then Bootstrap JS -->
+
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="validate.js"></script>
+    <!-- JSCRIPT THAT LETS THE NAV CHANGE BACKGROUND COLOR WHEN YOU SCROLL UP AND DOWN -->
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

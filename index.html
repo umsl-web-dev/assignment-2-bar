@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://kit.fontawesome.com/ca9de22987.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            let age = prompt('How old are you ?'); {
+                if (age >= 21) {
+                    alert('Welcome to the Page')
+                }
+                else {
+                    alert('You can browse but not buy!')
+                    testHideNav()
+                }
+            }
+        }
+    </script>
+
+    <title>Welcome Page </title>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-md py-0 fixed-top">
+        <a href="" class="navbar-brand"> <i class="fas fa-wine-bottle"> </i> WINERY.INC </a>
+        <!-- creates hamburger DropMenu  -->
+        <button class="class navbar-toggler" data-toggle="collapse" data-target="#navLinks"
+            aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- creates the links inside the button and we are passing the info by the id name -->
+        <div class="class collapse navbar-collapse" id="navLinks">
+            <ul class="class navbar-nav">
+                <li class="class nav-item">
+                    <a href="" class=" nav-link"> HOME </a>
+                </li>
+
+                <li class="class nav-item">
+                    <a href="./store.html" class="nav-link"> SHOP </a>
+                </li>
+
+                <li class="class nav-item">
+                    <a href="./signup.html" class="nav-link"> SIGN UP </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content -->
+    <section class="container-fluid px-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- makes the text hides ones until it reaches size large  -->
+                <div id="headingGrp" class="text-center d-none d-lg-block mt-5">
+                    <p class="lead text-justify"> Tasting wine? The more correct term is actually “smelling the wine
+                        while it’s in
+                        your mouth”. The process looks simple enough from the outside. You take a sip of wine, and
+                        either spit it, or swallow it. In reality, there's a whole lot more going on behind the scenes,
+                        where many of your senses will come into play. </p>
+
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="./images/rodrigo-abreu-Cj4CWKQllOM-unsplash.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="class container-fluid px-0">
+        <div class="row align-items-center content">
+            <div class="col-md-6 order-2 order-md-1">
+                <img src="./images/kelsey-chance-ZrhtQyGFG6s-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 text-center order-1 order-md-2">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb mb-5 md-md-0">
+                        <h2>WINE</h2>
+                        <img src="./images/iconfinder_house_corkscrew_1378846.png" alt="" class="d-none d-lg-inline">
+                        <p class="lead text-justify"> The history of wine spans thousands of years and is closely
+                            intertwined with
+                            the history of agriculture, cuisine, civilization and humanity itself. Archaeological
+                            evidence suggests that the earliest wine production came from sites in Armenia, Georgia, and
+                            Iran, dating from 8000 to 5000 BC. The archaeological evidence becomes clearer and
+                            points to domestication of grapevine in Early Bronze Age sites of the Near East, Sumer and
+                            Egypt from around the third millennium BC.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row align-items-center content">
+
+        <div class="col-md-6 text-center ">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 blurb mb-5 md-md-0">
+                    <h2>WINERY.INC</h2>
+                    <img src="./images/iconfinder_house_corkscrew_1378846.png" alt="" class="d-none d-lg-inline">
+                    <p class="lead text-justify"> Evidence of the earliest European wine production has been uncovered
+                        at
+                        archaeological sites
+                        in Macedonia, dated to 6,500 years ago. These same sites also contain remnants of the
+                        world's earliest evidence of crushed grapes. In Egypt, wine became a part of recorded
+                        history, playing an important role in ancient ceremonial life. Traces of wild wine dating
+                        from the second and first millennium BC have also been found in China.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="./images/maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg" alt="" class="img-fluid">
+        </div>
+
+    </div>
+
+    <div class="row align-items-center content">
+        <div class="col-md-6 order-2 order-md-1">
+            <img src="./images/elisha-terada-MDJvfXJGnRM-unsplash.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 blurb mb-5 md-md-0">
+                    <h2>WINERY.INC</h2>
+                    <img src="./images/iconfinder_house_corkscrew_1378846.png" alt="" class="d-none d-lg-inline">
+                    <p class="lead text-justify"> Wine, tied in myth to Dionysus/Bacchus, was common in ancient Greece
+                        and Rome,[8]
+                        and many of the major wine-producing regions of Western Europe today were established with
+                        Phoenician and later Roman plantations. Wine-making technology, such as the wine press,
+                        improved considerably during the time of the Roman Empire; many grape varieties and cultivation
+                        techniques were known and barrels were developed for storing and shipping wine.[9] </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center content">
+
+        <div class="col-md-6 text-center ">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 blurb mb-5 md-md-0">
+                    <h2>WINERY.INC</h2>
+                    <img src="./images/iconfinder_house_corkscrew_1378846.png" alt="" class="d-none d-lg-inline">
+                    <p class="lead text-justify text-justify"> In medieval Europe, following the decline of Rome and its
+                        industrial-scale wine
+                        production for export, the Christian Church became a staunch supporter of the wine necessary for
+                        celebration of the Catholic Mass. Whereas wine was forbidden in medieval Islamic cultures, its
+                        use in Christian libation was widely tolerated and Geber and other Muslim chemists pioneered its
+                        distillation for Islamic medicinal and industrial purposes such as perfume. Wine production
+                        gradually increased and its consumption became popularized from the 15th century onwards,
+                        surviving the devastating Phylloxera louse of the 1870s and eventually establishing growing
+                        regions throughout the world. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="./images/scott-warman-h4AGlo55tTA-unsplash.jpg" alt="" class="img-fluid">
+        </div>
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js then Bootstrap JS -->
+
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- JSCRIPT THAT LETS THE NAV CHANGE BACKGROUND COLOR WHEN YOU SCROLL UP AND DOWN -->
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            })
+        })
+    </script>
+
+</body>
+
+</html>
