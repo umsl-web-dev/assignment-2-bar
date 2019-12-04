@@ -161,3 +161,9 @@ body {
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}

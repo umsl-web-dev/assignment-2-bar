@@ -6,26 +6,6 @@ if (document.readyState == 'loading') {
 
 }
 
-// Grabs the Remove Buttons and clears the items
-function ready() {
-    var removeCartItems = document.getElementsByClassName('btn-danger')
-    console.log(removeCartItems)
-    for (var i = 0; i < removeCartItems.length; i++) {
-        var button = removeCartItems[i]
-        button.addEventListener('click', removeCartItem)
-    }
-    var qtyInput = document.getElementsByClassName('cart-quantity-input')
-    for (var i = 0; i < qtyInput.length; i++) {
-        var input = qtyInput[i]
-        input.addEventListener('change', qtyChanged)
-    }
-    var addToCardBtn = document.getElementsByClassName('shop-item-button')
-    for (var i = 0; i < addToCardBtn.length; i++) {
-        var button = addToCardBtn[i]
-        button.addEventListener('click', addToCardClicked)
-    }
-    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
-}
 
 function purchaseClicked(event) {
     alert('Thank you for your purchase')
@@ -49,7 +29,6 @@ function addToCardClicked(event) {
     updateCartTotal()
 
 }
-
 
 //  function that clear the item
 function removeCartItem(event) {
@@ -116,4 +95,77 @@ function updateCartTotal() {
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
 
+//  Hides the Shop link
+function testHideNav() {
+    let aTag = document.getElementsByClassName('nav-link')
+    console.log(aTag);
+    for (let i = 0; i < aTag.length; i++) {
+        if (aTag[i].innerHTML == " SHOP ") {
+            console.log(aTag[i].innerHTML);
+            if (true) {
+                aTag[i].style.visibility = "hidden";
+            }
 
+        }
+    }
+
+};
+
+// storing input from register-form
+function store() {
+    var usrName = document.getElementById('uName').value;
+    var usrPw = document.getElementById('uPw').value;
+    // var usrAge = localStorage.getItem("usrAge");
+
+    let stored_users = JSON.parse(localStorage.getItem('users'));
+    if (stored_users) {
+        stored_users.push({ name: usrName, password: usrPw });
+        localStorage.setItem('users', JSON.stringify(stored_users));
+    } else {
+        localStorage.setItem('users', JSON.stringify([{ name: usrName, password: usrPw }]));
+    }
+}
+
+// check if stored data from register-form is equal to entered data in the  login-form
+function check() {
+    var usrName = document.getElementById('userName').value;
+    var usrPw = document.getElementById('userPw').value;
+
+    let stored_users = JSON.parse(localStorage.getItem('users'))
+    if (stored_users) {
+        for (let u = 0; u < stored_users.length; u++) {
+            if (usrName == stored_users[u].name && usrPw == stored_users[u].password) {
+                alert('You are logged in ' + usrName);
+                return location.replace("./index.html");
+            }
+        }
+    }
+    else {
+        localStorage.setItem('users', '[]');
+
+    }
+
+    return alert('Access denied. Valid username and password is required.');
+
+}
+
+// Grabs the Remove Buttons and clears the items
+function ready() {
+    var removeCartItems = document.getElementsByClassName('btn-danger')
+    console.log(removeCartItems)
+    for (var i = 0; i < removeCartItems.length; i++) {
+        var button = removeCartItems[i]
+        button.addEventListener('click', removeCartItem)
+    }
+    var qtyInput = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < qtyInput.length; i++) {
+        var input = qtyInput[i]
+        input.addEventListener('change', qtyChanged)
+    }
+    var addToCardBtn = document.getElementsByClassName('shop-item-button')
+    for (var i = 0; i < addToCardBtn.length; i++) {
+        var button = addToCardBtn[i]
+        button.addEventListener('click', addToCardClicked)
+    }
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked);
+}

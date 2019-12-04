@@ -43,26 +43,39 @@
     </nav>
 
     <!-- sign up form  -->
-    <div class="container pt-5">
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-4"></div>
 
-        <!-- registration form  -->
-        <form id="register-form">
-            <input id="uName" type="text" placeholder="Name" value="" />
-            <input id="uPw" type="password" placeholder="Password" value="" />
-            <input id="rgstr_btn" type="submit" value="get Account" onClick="store()" />
-        </form>
+            <div class="col-lg-4">
+                <div class="card" style="width: 20rem;"">
+                    <img class=" card-img-top rounded mx-auto d-block" src="./images/user-astronaut-solid.svg"
+                    alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <!-- registration form  -->
+                        <p class="card-text">
+                            <form id="register-form">
+                                <input id="uName" type="text" placeholder="Name" value="" required />
+                                <input id="uPw" type="password" placeholder="Password" value="" required />
+                                <br>
+                                <input id="rgstr_btn" type="submit" value="Sign Up" onClick="store()" />
+                            </form>
+                        </p>
 
-        <!-- login form -->
-
-        <form id="login-form" action="./index.html">
-            <input id="userName" type="text" placeholder="Enter Username" value="" />
-            <input id="userPw" type="password" placeholder="Enter Password" value="" />
-            <input id="login_btn" type="submit" value="Login" onClick="check()" />
-        </form>
-
-
-
-
+                        <!-- login form -->
+                        <p class="card-text">
+                            <form id="login-form" action="">
+                                <input id="userName" type="text" placeholder="Enter Username" value="" />
+                                <input id="userPw" type="password" placeholder="Enter Password" value="" />
+                                <br>
+                                <input id="login_btn" type="submit" value="Login" onClick="check()" />
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
 
     </div>
 
@@ -79,7 +92,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script src="validate.js"></script>
+    <script src="app.js"></script>
     <!-- JSCRIPT THAT LETS THE NAV CHANGE BACKGROUND COLOR WHEN YOU SCROLL UP AND DOWN -->
     <script>
         $(function () {

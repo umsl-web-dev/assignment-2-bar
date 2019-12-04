@@ -10,22 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <script src="https://kit.fontawesome.com/ca9de22987.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-
-    <script type="text/javascript">
-        window.onload = function () {
-            let age = prompt('How old are you ?'); {
-                if (age >= 21) {
-                    alert('Welcome to the Page')
-                }
-                else {
-                    alert('You can browse but not buy!')
-                    testHideNav()
-                }
-            }
-        }
-    </script>
-
     <title>Welcome Page </title>
 
 </head>
@@ -138,11 +122,11 @@
                     <h2>WINERY.INC</h2>
                     <img src="./images/iconfinder_house_corkscrew_1378846.png" alt="" class="d-none d-lg-inline">
                     <p class="lead text-justify"> Wine, tied in myth to Dionysus/Bacchus, was common in ancient Greece
-                        and Rome,[8]
+                        and Rome,
                         and many of the major wine-producing regions of Western Europe today were established with
                         Phoenician and later Roman plantations. Wine-making technology, such as the wine press,
                         improved considerably during the time of the Roman Empire; many grape varieties and cultivation
-                        techniques were known and barrels were developed for storing and shipping wine.[9] </p>
+                        techniques were known and barrels were developed for storing and shipping wine. </p>
                 </div>
             </div>
         </div>
@@ -174,6 +158,34 @@
     </div>
 
 
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var usrAge = localStorage.getItem("usrAge");
+
+            if (!usrAge) {
+
+                usrAge = prompt("please enter your age");
+                {
+                    if (usrAge >= 21) {
+
+                        localStorage.setItem('users', JSON.stringify([{ Age: usrAge }]));
+                        alert('Welcome to the Page')
+                    }
+
+
+                    if (usrAge < 21) {
+
+                        localStorage.setItem('users', JSON.stringify([{ Age: usrAge }]));
+                        alert('You can browse but not buy!')
+                        testHideNav()
+                    }
+                }
+            }
+        }
+
+
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js then Bootstrap JS -->
@@ -187,6 +199,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
 
     <!-- JSCRIPT THAT LETS THE NAV CHANGE BACKGROUND COLOR WHEN YOU SCROLL UP AND DOWN -->
     <script>
