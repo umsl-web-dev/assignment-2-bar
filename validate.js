@@ -6,7 +6,6 @@ var pw = document.getElementById('uPw');
 function store() {
     localStorage.setItem('name', uName.value);
     localStorage.setItem('pw', uPw.value);
-
 }
 
 // check if stored data from register-form is equal to entered data in the   login-form
